@@ -1,0 +1,42 @@
+Objetos fundamentais:
+
+Blobs
+
+echo 'conteudo' | git hash-object --stdin
+
+O objeto blob contém o tipo do objeto (no caso, blob), o tamanho, a barra contrária com o zero (\0), e a string passada (conteudo)
+
+echo -e 'blob 9\0conteudo' | openssl sha1
+
+o sha que será exibido pelos dois comandos acima será o mesmo
+
+______________________________________________________
+
+O segundo objeto são as Trees
+
+A Tree armazena blobs
+
+o blob guarda o sha de um arquivo mas não guarda o nome do arquivo, já a tree guarda também o nome do arquivo.
+
+A Árvore (tree) pode apontar também para outra árvore, se assemelha muito a navegação por pastas, onde um diretório pode conter outros diretórios
+
+o blob contém o sha1 com os metadados de arquivo, as árvores(tree) contém o sha1 com os metadados das árvores
+
+se mudarmos uma vírgula em algum arquivo que está dentro desta árvore, o blob guardará o sha1 da alteração deste arquivo, e consequentemente, reflitirá a árvore que aponta para este blob, sendo assim, o sha desta árvore também mudará.
+
+_______________________________________________________
+
+Agora o objeto mais importante, o Commit
+
+O commit aponta para uma árvore (tree)
+"   "    apomta para um 'parente' (o último commit antes dele)
+"   "    aponta para um autor (o usuário que fez o commit)
+"   "    aponta para uma mensagem
+
+Os commits também contém um TIMESTAMP (carimbo de tempo, com horário e a data de quando foi criado)
+
+Um commit contém também um sha, e qualquer alteração em algum arquivo, refletirá no sha do blob, consequentemente no sha da árvore que contém o blob, e por fim, no sha do commit.
+
+Isso faz com que o Git seja uma aplicação bastante segura, fazendo o Git bem confiável.
+
+Como o commit aponta para um 'parente', e esse 'parente' aponta para outro 'parente' dele, podemos ver o histórico de alterações que são feitas, contruindo assim, uma linha do tempo de alterações realizadas.

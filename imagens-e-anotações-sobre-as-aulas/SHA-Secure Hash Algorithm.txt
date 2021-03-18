@@ -1,0 +1,25 @@
+SHA1:
+
+A sigla SHA significa 'SECURE HASH ALGORITHM (Algoritmo de hash seguro), é um conjunto de funções hash criptográficas projetadas pela NSA (Agência de Segurança Nacional dos EUA).
+
+A encriptação gera conjunto de caracteres identificador de 40 dígitos, sendo esse conjunto único.
+
+Em um terminal, podemos usar comandos como:
+
+echo "ola mundo" | openssl sha1
+
+Quando criamos um arquivo, como este, que tem o nome de example.txt, podemos usar o Git Bash e utilizar o comando abaixo:
+
+openssl sha1 example.txt
+
+Ele nos retornará uma saída parecida como esta abaixo:
+
+SHA1(example.txt)= ceea0673bbf8d3cb9eab920ac4ed8015a9615c48
+
+Ao fazer qualquer mínima alteração nesse arquivo e o salvarmos, podendo ser uma simples vírgula, esse conjunto de 40 caracteres será outro completamente diferente.
+
+Ele é uma chave que identifica as alterações que são feitas no arquivo.
+
+Abaixo colocarei a chave que será dada ao salvar este arquivo no final desta frase. Apagando a chave abaixo e salvando, verá que é a chave para este arquivo, e colando de volta a chave e utilizando o comando acima para ver a chave, ela será diferente.
+
+15aec7c09190ef4d8638984557ffdf0314aa18f0

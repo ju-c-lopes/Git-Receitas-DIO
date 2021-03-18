@@ -1,0 +1,32 @@
+GIT INIT
+
+Inicia um repositório no git, criando uma pasta oculta (iniciada por ponto '.') chamada .git. Nesta pasta estarão os arquivos e pastas de configuração do git.
+
+==================================
+
+Tracked / Untracked
+
+Arquivos rastreados pelo git.
+
+UNTRACKED - arquivos queo git ainda não monitora
+
+TRACKED - arquivos monitorados pelo git
+
+==================================
+
+GIT ADD
+
+Arquivos que estão em um repositório recém iniciados no git (git init), são "arquivos untracked", ainda não estão rastreados pelo git.
+
+--> Conceito STAGED
+Ao usarmos o comando "GIT ADD", arquivo não rastreado passa para o estado "STAGED", na qual está 'pronto' para ser rastreado.
+
+--> Conceito UNMODIFIED
+São arquivos que estão sendo rastreados pelo git (já receberam commit) e não há alteração nele desde que foi 'commitado' pela primeira vez ou qualquer outra vez.
+
+--> Conceito MODIFIED
+Ao fazer qualquer alteração em um arquivo com estado "unmodified", este arquivo passa para o estado "modified". Isso acontece pois o git 'percebe' a mudança do SHA1 deste arquivo que foi alterado.
+
+Arquivos em estado modified necessitam de uma ação do git, continuar rastreando com essa alteração ou descartar a alteração.
+
+Se aceitarmos a alteração, então continuaremos a rastrear este arquivo, utilizando novamente o comando "GIT ADD". Este arquivo voltará ao "STAGED", onde estará novamente pronto para receber um novo commit.
