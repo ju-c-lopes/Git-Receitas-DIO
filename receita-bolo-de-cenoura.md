@@ -23,9 +23,12 @@
 4. Acrescente o fermento e misture lentamente com uma colher.
 5. Asse em um forno preaquecido a 180° C por aproximadamente 40 minutos.
 
-
-
 ##### Cobertura
 
 1. Despeje em uma tigela a manteiga, o chocolate em pó, o açúcar e o leite, depois misture.
 2. Leve a mistura ao fogo e continue misturando até obter uma consistência cremosa, depois despeje a calda por cima do bolo.
+
+
+
+# Vai ficar GOSTOSOOOO :drooling_face:
+
